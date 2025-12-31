@@ -2,14 +2,12 @@ ARCHS = arm64 arm64e
 TARGET = iphone:clang:latest:13.0
 INSTALL_TARGET_PROCESSES = SpringBoard
 
-THEOS_DEVICE_IP = localhost
-THEOS_DEVICE_PORT = 2222
-
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = SovereignSecurity
 
-SovereignSecurity_FILES = Tweak.xm main.cpp SovereignSecurity.m
+# دمج جميع الملفات المصدرية لضمان عمل النظام بالكامل
+SovereignSecurity_FILES = Tweak.xm SovereignSecurity.m
 SovereignSecurity_FRAMEWORKS = UIKit Foundation OpenGLES GLKit
 SovereignSecurity_CFLAGS = -fobjc-arc -Wno-deprecated-declarations
 SovereignSecurity_CCFLAGS = -std=c++17 -Wno-deprecated-declarations
