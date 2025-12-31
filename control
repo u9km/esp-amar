@@ -1,0 +1,9 @@
+Package: com.you.sovereignsecurity
+Name: SovereignSecurity
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: نظام ESP تعليمي (للتجربة فقط)
+Maintainer: You
+Author: You
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
